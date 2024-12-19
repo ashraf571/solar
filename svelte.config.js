@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import * as child_process from 'node:child_process';
 
@@ -29,8 +29,8 @@ const config = {
     // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
     // If your environment is not supported or you settled on a specific environment, switch out the adapter.
     // See https://kit.svelte.dev/docs/adapters for more information about adapters.
-    // adapter: adapter(),
-    adapter: adapter({ out:'vercel' } ),
+    adapter: adapter(),
+    // adapter: adapter({ out:'vercel' } ),
 
     // https://kit.svelte.dev/docs/configuration#version
     version: {
